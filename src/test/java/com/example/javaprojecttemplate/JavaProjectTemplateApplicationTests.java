@@ -1,18 +1,14 @@
 package com.example.javaprojecttemplate;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.TestPropertySource;
-import org.springframework.test.context.junit4.SpringRunner;
+import static org.assertj.core.api.Assertions.assertThat;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
-@TestPropertySource(locations="classpath:application-test.properties")
+import org.junit.Test;
+
 public class JavaProjectTemplateApplicationTests {
 
 	@Test
-	public void contextLoads() {
+	public void junitConfigured() {
+		assertThat(1).isEqualTo(1);
 	}
 
 }

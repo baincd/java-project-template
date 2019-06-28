@@ -1,1 +1,1 @@
-./mvnw -Dmaven.gitcommitid.skip=true clean compile exec:java clean -Dstart-class=JavaProjectSetup
+./mvnw -Dmaven.gitcommitid.skip=true clean compile exec:java clean -Dexec.mainClass=JavaProjectSetup
