@@ -162,7 +162,12 @@ public class JavaProjectSetup {
 	}
 	
 	public static String buildJavaPackage(String groupId, String artifactId) {
-		return format("{0}.{1}",groupId,artifactId.replaceAll("-", ""));
+		String pkg = groupId.replaceAll("-", "");
+		String suffix = "." + artifactId.replaceAll("-", "");
+		if (!pkg.endsWith(suffix)) {
+			pkg += suffix;
+		}
+		return pkg;
 	}
 	
 	public static String buildJavaPackagePath(String javaPackage) {
